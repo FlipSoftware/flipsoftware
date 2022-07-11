@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Software</title>
+    <style>
+      .main {
+        padding: 40px;
+      }
+      html,
+      body {
+        background: #1e1e1e;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      #splash {
+        background: #dc281e;
+        background-repeat: repeat-y;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        animation: splash 3s ease-in;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+
+      #loader:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -8px;
+        bottom: -170px;
+        width: 3px;
+        background: #1e1e1e;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        height: 200px;
+      }
+
+      #loader:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: 8px;
+        bottom: -190px;
+        width: 3px;
+        background: #000;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        height: 200px;
+      }
+
+      #splash .anim {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        width: 100px;
+        transform: translate(-50%, 100%);
+        animation: loader 4s linear;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      @keyframes loader {
+        0% {
+          transform: translate(-50%, 110%);
+        }
+        30% {
+          transform: translate(-50%, 50%);
+        }
+        100% {
+          transform: translate(-50%, 0%);
+        }
+      }
+
+      @keyframes splash {
+        0% {
+          transform: translate(0%, 0%);
+        }
+        50% {
+          transform: translate(0%, 0%);
+        }
+        100% {
+          transform: translate(0%, -100%);
+        }
+      }
+      /* ANIMATION */
+      .I_169 {
+        animation: 10s ease-in-out infinite normal forwards running I_169;
+      }
+      @keyframes I_169 {
+        0% {
+          stroke: #888;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+        10% {
+          stroke: #00ffff;
+          filter: drop-shadow(0 -24px 16px #4444ff80);
+        }
+        80% {
+          stroke: #88888840;
+        }
+        100% {
+          stroke: #88888840;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+      }
+      .L_97 {
+        animation: 10s ease-in-out infinite normal forwards running L_97;
+      }
+      @keyframes L_97 {
+        0% {
+          stroke: #888;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+        5% {
+          stroke: #00ffff;
+          filter: drop-shadow(0 -24px 16px #4444ff80);
+        }
+        75% {
+          stroke: #88888840;
+        }
+        100% {
+          stroke: #88888840;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+      }
+      .Fendwireframe_448 {
+        animation: 10s ease-in-out infinite Fendwireframe_448;
+      }
+      @keyframes Fendwireframe_448 {
+        0% {
+          stroke: #888;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+        1% {
+          stroke: #00ffff;
+          filter: drop-shadow(0 -24px 16px #4444ff80);
+        }
+        70% {
+          stroke: #88888840;
+        }
+        100% {
+          stroke: #88888840;
+          filter: drop-shadow(0 -24px 16px #00000080);
+        }
+      }
+      *, ::before, ::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      * {
+        --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+      }
+      :root {
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+      }
+      :-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      ::moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      [type='search'] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      abbr[title] {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      body {
+        margin: 0;
+        font-family: inherit;
+        line-height: inherit;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+        font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        line-height: 1.5;
+      }
+      p {
+        margin: 0;
+      }
+      .windi-1pwexc8 {
+        margin-top: 2.5rem; /* mt-10 */
+      }
+      .windi-14vufhz {
+        font-size: 2.25rem; /* text-4xl */
+        line-height: 2.5rem; /* text-4xl */
+        text-align: center; /* text-center */
+        --tw-text-opacity: 1; /* text-white */
+        color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+      }
+      .windi-1ebkzxr {
+        font-size: 6rem; /* text-8xl */
+        line-height: 1; /* text-8xl */
+        text-align: center; /* text-center */
+        --tw-text-opacity: 1; /* text-white */
+        color: #DC281E; /* text-white */
+      }
+      .windi-r1m5kc {
+        font-size: 4.5rem; /* text-7xl */
+        line-height: 1; /* text-7xl */
+        text-align: center; /* text-center */
+        --tw-text-opacity: 1; /* text-white */
+        color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+      }
+      .windi-1r198kr {
+        font-size: 2.25rem; /* text-4xl */
+        line-height: 2.5rem; /* text-4xl */
+        text-align: center; /* text-center */
+        --tw-text-opacity: 1; /* text-white */
+        color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+      }
+      .windi-1t96iw0 {
+        font-size: 12rem; /* text-[12rem] */
+        line-height: 1; /* text-[12rem] */
+        text-align: center; /* text-center */
+        --tw-text-opacity: 1; /* text-white */
+        color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+        --tw-text-opacity: 1; /* text-red-600 */
+        color: rgba(220, 38, 38, var(--tw-text-opacity)); /* text-red-600 */
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class=" main">
+      <header class="windi-1pwexc8">
+        <p
+          style="font-family: 'Lato', sans-serif; font-weight: 900"
+          class="windi-14vufhz"
+        >
+          SOMETHING<br />
+          <span class="windi-1ebkzxr"> AWESOME<br /> </span>
+          <span class="windi-r1m5kc">
+            IS COMING<br />
+          </span>
+          <span class="windi-1r198kr"> LATER THIS YEAR<br>STAY TUNED</span>
+          <div class="windi-1t96iw0">
+
+          </div>
+        </p>
+      </header>
+    </div>
+    <div id="splash">
+      <div class=" anim">
+        <div id="loader"></div>
+      </div>
+    </div>
+  </body>
+</html>
