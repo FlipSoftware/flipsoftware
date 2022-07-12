@@ -8,7 +8,7 @@
     <style>
       /* SECTION: LAYOUT & STYLES */
       .main {
-        padding: 40px;
+        margin-top: 2rem;
       }
       html,
       /* radial gradient to top */
@@ -164,7 +164,7 @@
       }
       .svg_logo {
         position: relative;
-        max-width: 40vw;
+        width: clamp(400px, 50vw, 900px);
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -194,19 +194,19 @@
             line-height: 1;
           "
         >
-          <span style="font-size: clamp(1.5rem, 5vw, 3rem)">
+          <span style="font-size: clamp(2rem, 4vw, 4rem)">
             SOMETHING<br />
           </span>
           <span
             id="awesome_text"
-            style="font-size: clamp(3rem, 10vw, 6rem); color: #dc281e"
+            style="font-size: clamp(3rem, 6vw, 8rem); color: #dc281e"
           >
             AWESOME<br />
           </span>
-          <span style="font-size: clamp(1.75rem, 6vw, 4rem)">
+          <span style="font-size: clamp(2rem, 4vw, 4rem)">
             IS COMING<br />
           </span>
-          <span style="font-size: clamp(1rem, 4vw, 3rem)"> STAY TUNED</span>
+          <span style="font-size: clamp(1.5rem, 3vw, 3rem)"> STAY TUNED</span>
         </p>
         <div
           style="display: flex; justify-content: center; align-items: center"
@@ -214,7 +214,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 90 1000 1000"
+            viewBox="0 150 1000 1000"
             fill="none"
             preserveAspectRatio="xMaxYMin meet"
             class="svg_logo"
@@ -656,10 +656,10 @@
         </div>
       </header>
     </div>
-    <div id="splash">
+    <!-- <div id="splash">
       <div class="anim">
         <div id="loader"></div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
